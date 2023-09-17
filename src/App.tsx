@@ -11,14 +11,6 @@ function App() {
         <p>
           Tutorial for using Geolocation API in a PWA.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <Coordinates />
       </header>
     </div>
