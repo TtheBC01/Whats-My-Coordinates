@@ -7,9 +7,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Tutorial for using Geolocation API in a PWA.
+          Click the compass to get your coordinates.
         </p>
         <Coordinates />
       </header>

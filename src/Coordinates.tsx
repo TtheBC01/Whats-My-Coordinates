@@ -1,6 +1,7 @@
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import './App.css';
+import logo from './compass.png';
 
 export default function Coordinates() {
 
@@ -44,8 +45,8 @@ export default function Coordinates() {
 
     return (
         <>
-            <button className="button-85" role="button" onClick={handleOnClick}>
-                What's my Coordinates?
+            <button className="button-85">
+                <img src={logo} className="App-logo" alt="logo" onClick={handleOnClick} />
             </button>
             <Toaster />
             <div>
