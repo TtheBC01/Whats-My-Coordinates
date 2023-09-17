@@ -1,5 +1,6 @@
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import './App.css';
 
 export default function Coordinates() {
 
@@ -30,7 +31,7 @@ export default function Coordinates() {
     function showError(error: GeolocationPositionError) {
         switch(error.code) {
           case error.PERMISSION_DENIED:
-            toast.error("User denied the request for Geolocation.")
+            toast.error("User denied the request for Geolocation. Check browser privacy settings.")
             break;
           case error.POSITION_UNAVAILABLE:
             toast.error("Location information is unavailable.")
@@ -43,7 +44,7 @@ export default function Coordinates() {
 
     return (
         <>
-            <button onClick={handleOnClick}>
+            <button className="button-85" role="button" onClick={handleOnClick}>
                 What's my Coordinates?
             </button>
             <Toaster />

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './compass.png';
 import './App.css';
 import Coordinates from './Coordinates';
 
