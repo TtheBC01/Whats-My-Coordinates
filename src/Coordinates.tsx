@@ -14,6 +14,7 @@ export default function Coordinates() {
 
     function handleOnClick() {
         if (navigator.geolocation) {
+            console.log("line17")
             navigator.geolocation.getCurrentPosition(showPosition, showError);
         } else {
             toast.error('Location functionality not available, check your privacy settings.')
@@ -45,8 +46,8 @@ export default function Coordinates() {
 
     return (
         <>
-            <button className="button-85">
-                <img src={logo} className="App-logo" alt="logo" onClick={handleOnClick} />
+            <button className="button-85" onClick={handleOnClick}>
+                <img src={logo} className="App-logo" alt="logo" />
             </button>
             <Toaster />
             <div>
