@@ -10,7 +10,7 @@ export default function Coordinates() {
     const [accuracy, setAccuracy] = useState<number | null>(null);
     const [altitude, setAltitude] = useState<number | null>(null);
     const [altitudeAccuracy, setAltitudeAccuracy] = useState<number | null>(null);
-    
+
 
     function handleOnClick() {
         if (navigator.geolocation) {
@@ -31,41 +31,42 @@ export default function Coordinates() {
     }
 
     function showError(error: GeolocationPositionError) {
-        switch(error.code) {
-          case error.PERMISSION_DENIED:
-            toast.error("User denied the request for Geolocation. Check browser privacy settings.")
-            break;
-          case error.POSITION_UNAVAILABLE:
-            toast.error("Location information is unavailable.")
-            break;
-          case error.TIMEOUT:
-            toast.error("The request to get user location timed out.")
-            break;
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                toast.error("User denied the request for Geolocation. Check browser privacy settings.")
+                break;
+            case error.POSITION_UNAVAILABLE:
+                toast.error("Location information is unavailable.")
+                break;
+            case error.TIMEOUT:
+                toast.error("The request to get user location timed out.")
+                break;
         }
-      }
+    }
 
     return (
         <>
+            <p>
+                Click the compass to get your coordinates.
+            </p>
             <button className="button-85" onClick={handleOnClick}>
                 <img src={logo} className="App-logo" alt="logo" />
             </button>
             <Toaster />
             <div>
-                <p>
-                    Latitude: {latitude}
-                </p>
-                <p>
-                    Longitude: {longitude}
-                </p>
-                <p>
-                    Accuracy: {accuracy}
-                </p>
-                <p>
-                    Altitude (meters): {altitude}
-                </p>
-                <p>
-                    Altitude Accuracy (meter): {altitudeAccuracy}
-                </p>
+                <div></div>
+                <table>
+                    <tr>
+                        <th>Long</th>
+                        <th>Lat</th>
+                        <th>Alt</th>
+                    </tr>
+                    <tr>
+                        <td>{longitude?.toFixed(3)}&deg; &plusmn; {accuracy?.toFixed(1)}m</td>
+                        <td>{latitude?.toFixed(3)}&deg; &plusmn; {accuracy?.toFixed(1)}m</td>
+                        <td>{altitude?.toFixed(1)}m &plusmn; {altitudeAccuracy?.toFixed(1)}m</td>
+                    </tr>
+                </table>
             </div>
         </>
     );
