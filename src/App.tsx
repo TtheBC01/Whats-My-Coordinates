@@ -5,17 +5,22 @@ import Coordinates from './Coordinates';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Coordinates />
-      </header>
-      <div className="social-container">
-        <a href="https://github.com/TtheBC01/Whats-My-Coordinates"
-          className="github">
-          <TfiGithub />
-        </a>
+    <>
+      <div className="App">
+        <header className="App-header">
+          <Coordinates />
+        </header>
       </div>
-    </div>
+      <footer className="footer">
+        <div className='copyright'> Copyright © 2023 toddchapman.io</div>
+        <div className='social'>
+          <a href="https://github.com/TtheBC01/Whats-My-Coordinates"
+            className='github'>
+            <TfiGithub size='25px' />
+          </a>
+        </div>
+      </footer>
+    </>
   );
 }
 

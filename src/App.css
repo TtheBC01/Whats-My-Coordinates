@@ -121,20 +121,34 @@ tr:nth-child(even) {
   border-radius: 10px;
 }
 
-.social-container {
+.footer {
+  color: rgb(95, 93, 93);
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   position: fixed;
   bottom: 0;
   background: #090a0a;
-  padding: 30px 30px;
+  padding: 0px 0px 25px 0px;
   height: 10px;
-  margin: auto;
-  overflow: hidden;
+}
+
+.copyright {
+  color:rgb(95, 93, 93);
+  font-size: 10.5pt;
+  padding-left:10px;
+  padding-top:10px;
+}
+
+.social {
+  color:rgb(95, 93, 93);
+  align-content: center;
 }
 
 .github {
-  color: rgb(95, 93, 93)
+  color: rgb(95, 93, 93);
+  float: right;
+  padding: 0px 10px 0px 0px;
 }
 
 .github:hover {
