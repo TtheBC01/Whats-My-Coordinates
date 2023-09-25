@@ -1,5 +1,6 @@
 .App {
   text-align: centers;
+  position: relative;
 }
 
 .App-logo {
@@ -15,8 +16,8 @@
 
 .App-header {
   background-color: #090a0a;
-  min-height: 100vh;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -121,14 +122,19 @@ tr:nth-child(even) {
 }
 
 .social-container {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
   background: #090a0a;
-  padding: 25px 50px;
-  size: auto;
+  padding: 30px 30px;
+  height: 10px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .github {
-  color: rgb(95, 93, 93);
-  float: right;
+  color: rgb(95, 93, 93)
 }
 
 .github:hover {
