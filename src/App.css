@@ -137,7 +137,7 @@ tr:nth-child(even) {
   color:rgb(95, 93, 93);
   font-size: 9.5pt;
   padding-left:10px;
-  padding-top:10px;
+  padding-top:15px;
 }
 
 .social {
@@ -148,7 +148,7 @@ tr:nth-child(even) {
 .github {
   color: rgb(95, 93, 93);
   float: right;
-  padding: 0px 15px 0px 0px;
+  padding: 10px 15px 0px 0px;
 }
 
 .github:hover {
