@@ -119,3 +119,18 @@ tr:nth-child(even) {
   top: 0;
   border-radius: 10px;
 }
+
+.social-container {
+  background: #090a0a;
+  padding: 25px 50px;
+  size: auto;
+}
+
+.github {
+  color: rgb(95, 93, 93);
+  float: right;
+}
+
+.github:hover {
+  transform: translateY(-2px);
+}
