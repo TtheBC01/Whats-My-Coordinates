@@ -140,6 +140,10 @@ tr:nth-child(even) {
   padding-top:15px;
 }
 
+a.copyright{
+  color: #00ff2a;
+}
+
 .social {
   color:rgb(95, 93, 93);
   align-content: center;
