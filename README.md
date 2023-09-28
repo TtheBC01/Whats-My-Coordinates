@@ -10,8 +10,8 @@ This tutorial repo is meant to demonstrate two userful web resources:
 
 ## GeoLocation
 
-A user's location is a valuable data point for many user applications access and in some cases it is a mission critical piece of information to have in order to
-deliver a service to a customer. The repo demonstrates the use of the GeoLocation API that is available in most modern browsers included Chrome and Safari. Depending on the user's device, the GeoLocation API determines location by wifi signal triangulation or by GPS (if such hardware is available on the device).
+A user's location is a valuable data point for many user applications to access and in some cases it is a mission critical piece of information to have in order to
+deliver a service to a customer. This repo demonstrates the use of the GeoLocation API that is available in most modern browsers including Chrome and Safari. Depending on the user's device, the GeoLocation API determines location by wifi signal triangulation or by GPS (if such hardware is available on the device).
 
 You can find the utilization of the GeoLocation API inside [`Coordinates.tsx`](/src/Coordinates.tsx). Specifically, see [`handleOnClick()`](/src/Coordinates.tsx#L63) and [`getPosition()`](/src/Coordinates.tsx#L73). The function `getPosition()` is called on the successful handling of the dispatch of `navigator.geolocation.getCurrentPosition()`. In the scenario where the browser is unable to determine a user's position (for instance when a user disallows access to their location in their devices permission settings), then an error will be thrown and [`showError()`](/src/Coordinates.tsx#L119) will be called an error code that reveals more information about the nature of the error. 
 
